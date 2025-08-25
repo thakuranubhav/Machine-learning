@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .ip{
+             width: 400px;
+             height: auto;
+            display: block;
+            font-size: medium;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
 </head>
 <body>
     
     <h1>FWI Prediction</h1>
-
-    <form action="{{ url_for('predict_datapoint') }}" method="post">
+    <div class="ip">
+        <form  action="{{ url_for('predict_datapoint') }}" method="post">
         <input type="text" name="Temparature" placeholder="Temparature" required="required">
         <input type="text" name="RH" placeholder="RH" required="required">
         <input type="text" name="ws" placeholder="ws" required="required">
@@ -23,9 +32,12 @@
         <button type="submit">Predict</button>
 
     </form>
+    </div>
     <h2>
         The FWI Prediction is {{results}}
     </h2>
+
+    
 
 
 </body>
